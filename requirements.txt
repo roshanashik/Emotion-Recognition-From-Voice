@@ -1,0 +1,23 @@
+# Core libraries
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+
+# Audio processing
+librosa
+pydub
+soundfile
+noisereduce
+SpeechRecognition
+
+# Deep learning (for training and embeddings)
+tensorflow
+tensorflow_hub
+keras
+torch
+torchaudio
+
+# Web frontend
+streamlit

@@ -1,0 +1,7 @@
+Augmented Balanced RAVDESS/
+documents/
+pdf/
+__pycache__/
+.ipynb_checkpoints/
+*.zip
+*.tmp
