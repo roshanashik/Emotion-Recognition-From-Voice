@@ -24,9 +24,7 @@ The project supports **file-based emotion recognition** and a **real-time voice 
 
 * System demo screenshot OR emotion prediction UI
 
-
 ![Project Banner](/Images/UI%201.png)
-
 
 ---
 
@@ -93,7 +91,6 @@ The system follows a **modular pipeline** consisting of:
 ### 🔗 Hybrid Feature Fusion
 
 * MFCCs and VGGish features are:
-
   * Extracted independently
   * Time-aligned
   * Concatenated into a single feature vector
@@ -104,25 +101,20 @@ The system follows a **modular pipeline** consisting of:
 
 ## 🧠 Model Architectures
 
-
-### ⚡ Transformer Model (Proposed)
+### ⚡ Transformer Model
 
 * Multi-head self-attention mechanism
 * Parallel processing (faster training)
 * Captures both short- and long-term dependencies
 * Better generalization across emotions
 
-📌 **Add image here:**
-
-
 ![Transformer Architecture](/Images/model%20architecture.png)
-
 
 ---
 
 ## 🔄 Data Augmentation Techniques
 
-To improve robustness and generalization Several Augmentations Techniques are applied to Dataste :
+To improve robustness and generalization, the following augmentations are applied to the **raw RAVDESS dataset** before training:
 
 * Noise Addition
 * Pitch Shifting
@@ -132,7 +124,7 @@ To improve robustness and generalization Several Augmentations Techniques are ap
 * Reverberation
 * Echo Addition
 
-📌 *Augmentation significantly improved Transformer performance.*
+📌 *Augmentation significantly improves Transformer performance.*
 
 ---
 
@@ -174,7 +166,6 @@ To improve robustness and generalization Several Augmentations Techniques are ap
 | Disgust   | 0.89      | 0.84   | 0.86     |
 | Surprised | **0.92**  | 0.86   | **0.89** |
 
-
 ---
 
 ## 🎙️ Real-Time Emotion Recognition (Demo)
@@ -193,48 +184,33 @@ To improve robustness and generalization Several Augmentations Techniques are ap
 ```bash
 pip install -r requirements.txt
 streamlit run main.py
-```
-
----
-
-## 📰 Publication
-
-📄 **Paper Title:**
-*Emotion Recognition from Voice Using Transformer Networks and Hybrid Feature Extraction*
-
-📌 **Accepted at:**
-International Journal of Research and Analytical Reviews (IJRAR) Conference
-
----
-
-## 🎓 Academic Context
-
-* Final Year B.Tech Project
-* Department of AI & Data Science
-* MEA Engineering College, Perinthalmanna
-* Guided by **Asst. Prof. Arsheenath Beegam**
-* Team of 3 members
-
----
-
-## 🚀 Future Work
-
-* Multi-dataset training (CREMA-D, TESS, SAVEE)
-* wav2vec / BERT-based audio models
-* Mobile & web deployment
-* Multimodal emotion recognition (face + voice)
+````
 
 ---
 
 ## 🔗 Pretrained Model Files
 
 This project uses **Google’s VGGish pretrained model**.
-Large model files are managed via **Git LFS**, so after cloning the repository, you must run:
+Large model files are managed via **Git LFS**, so after cloning the repository, run:
 
 ```bash
 git lfs install
 git lfs pull
 ```
+
+### Models included:
+
+* `vggish_model.ckpt` (~270 MB)
+* `vggish_saved_model/` (~270 MB)
+
+> **Note:** The dataset is **not included** due to size. The model is trained on the **raw RAVDESS dataset**, which can be downloaded from:
+
+🔗 [RAVDESS Emotional Speech Audio](https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio)
+
+**Apply the described augmentations to this raw dataset to train and obtain a robust model.**
+
+---
+
 ## 🙏 Acknowledgements
 
 * RAVDESS Dataset
